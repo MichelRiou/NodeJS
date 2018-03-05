@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title=title
+        block css
+            link(rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            )
+    body(class ="container-fluid")
+        nav(class="navbar navbar-expand-md navbar-light bg-dark")
+            a(class="navbar-brand") Mon Application
+            button(class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarTarget")
+                span.navbar-toggler-icon
+            div(class="collapse navbar-collapse" id="navbarTarget")
+                ul(class="navbar-nav")
+                    li(nav-item) texte
+        div(class="row")
+            block content
+
+        block js
+            script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")

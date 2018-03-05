@@ -8,9 +8,10 @@ const app = express();
 app.use(express.static(__dirname + '/public'));
 
 // Gestion du moteur de rendu
-app.set('views', __dirname + 'views');
+app.set('views', __dirname + '/views');
 app.set ('view engine','pug');
 
+// Une route simple
 app.get("/hello", (req, res) => {
 
     // Parametres 
@@ -18,7 +19,14 @@ app.get("/hello", (req, res) => {
         req.query.name = "inconnu";
     }
 
-    res.end("hello  " + req.query.name);
+    res.render("hello" , {
+                    message: "hello" + req.query.name,
+                    title:"Mon tire",
+                    authenticated:   true,
+                    isGod: false,
+                    userInfo: {name: "joe Admin", roles: ["admin"]},
+                    fruits: ['Pomme','Poire','Cerise','Abricot'],
+                });
 });
 
 

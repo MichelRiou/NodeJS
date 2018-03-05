@@ -1,0 +1,16 @@
+extends layout
+
+block append css   
+    // ici commentaire
+    link(rel="stylesheet" href="css/styles.css")
+block content
+        div(class="col col-md-6") 
+            h1 #{message}
+            if authenticated    
+                h2= userInfo.name
+            else
+                p Vous n'êtes pas authentifiés 
+            unless isGod
+                ul
+                    each item, index in fruits
+                        li=item
