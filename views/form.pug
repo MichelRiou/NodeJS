@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div(class="col col-md-6")
+        form(method="post")
+            .form-group
+                label(for="email") Votre Email
+                input(type="email" class="form-control" id="email" name="email")
+            .form-group
+                label(for="password") Votre Mot de Passe
+                input(type="password" class="form-control" id="password" name="password")
+            .form-group
+                button(type="submit" class="btn btn-primary btn-block") Valider
