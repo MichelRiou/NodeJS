@@ -24,5 +24,3 @@ app.use("/api",apiRoutes);
 
 // Express sur le port 3000
 app.listen(3000);
-
-
